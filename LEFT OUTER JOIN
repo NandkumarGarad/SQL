@@ -1,0 +1,5 @@
+ 
+
+ select firstName,lastName, city,state
+ from person,address
+ where person.personId=address.personId(+);
