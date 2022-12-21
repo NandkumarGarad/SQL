@@ -34,3 +34,10 @@ Output:
 +---------------------+
 | 200                 |
 +---------------------+
+
+ANSWER ==>
+
+ select max(salary) SecondHighestSalary
+ from employee
+ where salary < (select max(salary)
+                 from employee);
