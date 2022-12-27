@@ -1,0 +1,38 @@
+SQL> select * from employee_info;
+
+    EMP_ID EMP_NAME             MANAGER_ID     SALARY
+---------- -------------------- ---------- ----------
+       101 Deepak                               50000
+       102 Sudeep                      101      70000
+       103 Rajesh                               20000
+       104 Ashiwini                    103      70000
+       105 Pankaj                               30000
+       106 Sandeep                     105      80000
+       107 Archana                              20000
+       108 Suvama                      104      50000
+       109 James                       108      90000
+       110 Manoj                               530000
+       111 Divya                       110      60000
+       112 Ruth                                 10000
+       113 Vaibhav                     111      40000
+       114 Sangeeta                    113      60000
+       115 Meena                       110      30000
+
+15 rows selected.
+
+SQL> select emp_name 
+  2  from employee_info 
+  3  where salary > 50000
+  4  order by substr(emp_name,-3) asc, emp_id asc;
+
+EMP_NAME
+--------------------
+Sudeep
+Sandeep
+Sangeeta
+Ashiwini
+James
+Manoj
+Divya
+
+7 rows selected.
