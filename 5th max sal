@@ -1,0 +1,11 @@
+  1  SELECT *
+  2  FROM (SELECT ROWNUM R1, SAL
+  3        FROM (SELECT DISTINCT(SAL)
+  4             FROM EMP
+  5             ORDER BY SAL DESC))
+  6* WHERE R1 = 5
+SQL> /
+
+        R1        SAL
+---------- ----------
+         5       2450
